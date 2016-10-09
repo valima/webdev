@@ -32,8 +32,9 @@
         alert('Your guess is alphabetically lower. Try again!')
       }
       else {
-        alert('Congratulations! I was thinking of '+target+
-              '\n\nYou took '+count + ' attempts to get the right answer')
+        document.body.style.backgroundColor = target;
+        setTimeout(function() { alert('Congratulations! I was thinking of '+target+
+              '\n\nYou took '+count + ' attempts to get the right answer'); },0)
         match = true
       }
       return match
