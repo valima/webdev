@@ -4,27 +4,23 @@
     var colors=['aqua','black','blue','green','orange','pink','red','white','yellow']
     var target_index=0
     var taget=''
-    var guess =
-    var match = false
+    var finished = false
     var count =0
     target_index = Math.floor(Math.random() * colors.length);
     target = colors[target_index];
     alert("I am thinking of: "+ target);
     function do_game() {
-      while(!match)
+      while(!finished)
       {
-        guess = prompt("I am thinking of these colors:\n\n" + colors.sort() +
-                "\n\nWhat color am I thinking of?");
+        guess_input = prompt("I am thinking of these colors:\n\n" +
+                      colors.sort() +
+                      "\n\nWhat color am I thinking of?");
         count += 1;
-        if (guess == target) {
-          match = true;
-        }
-        else {
-          do_game();
+        if (guess_input == target) {
+          finished = true;
         }
       }
     }
-
   </script>
 </head>
 <body onload="do_game()">
