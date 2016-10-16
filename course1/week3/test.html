@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <script>
+            alert('Hello');
+            var numberOfFaces = 5;
+            var theLeftSide = document.getElementById('leftSide')
+            alert (theLeftSide.id);
+
+            function generateFaces() {
+                alert('in function');
+                for (int i=1 to i<= numberOfFaces;i++) {
+                    smileImg = document.createElement('img')
+
+                    smileImg = document.createElement('img')
+                    smileImg.src='http://home.cse.ust.hk/~rossiter/mooc/matching_game/smile.png'
+                    
+                    positionTop = Math.floor(Math.random() * 400);
+                    positionLeft = Math.floor(Math.random() * positionTop);
+                    smileImg.style.top = positionTop;
+                    smileImg.style.left = positionLeft;
+
+                    theLeftSide.appendChild(smileImg)
+                }
+            }
+        </script>
+    </head>
+</html>
